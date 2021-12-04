@@ -1,18 +1,29 @@
 <h2>Saque</h2>
 
-<div class="row">
-  <div class="col">
-    <app-label-input label="Agencia" type="text"></app-label-input>
-  </div>
-  <div class="col">
-    <app-label-input label="Conta" type="text"></app-label-input>
-  </div>
-  <div class="col">
-    <app-label-input label="Valor" type="text"></app-label-input>
-  </div>
-</div>
+<form class="row" [formGroup]="formGroup" (ngSubmit)="sacar()">
+<!-- <form (ngSubmit)="onSubmit()"> -->
+  <label for="">Agência</label>
+  <input type="text" class="form-control" formControlName="agencia">
 
 
-<app-checkbox label=""></app-checkbox>
+  <label for="">Conta</label>
+  <input type="text" class="form-control" formControlName="numeroConta">
 
-<app-botao titulo="Enviar"></app-botao>
+  <label for="">Valor</label>
+  <input type="text" class="form-control" formControlName="valor">
+
+
+  <!-- <div class="col">
+    <a class="btn btn-primary">Sacar</a>
+  </div> -->
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-dark">Sacar</button>
+  </div>
+
+</form>
+
+
+<!-- <app-checkbox label=""></app-checkbox> -->
+
+<!-- <app-botao titulo="Enviar"></app-botao> -->
