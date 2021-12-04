@@ -16,7 +16,8 @@ import { BotaoComponent } from './components/botao/botao.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastrarClientesComponent } from './pages/clientes/cadastrar-clientes/cadastrar-clientes.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
-// import { FormBuilder } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ContasComponent } from './pages/contas/contas.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +33,15 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
     CheckboxComponent,
     BotaoComponent,
     CadastrarClientesComponent,
-    ClientesComponent
+    ClientesComponent,
+    ContasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
