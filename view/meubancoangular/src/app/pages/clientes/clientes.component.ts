@@ -14,7 +14,6 @@ export class ClientesComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarTodosClientes();
-
   }
 
   listarTodosClientes(){
