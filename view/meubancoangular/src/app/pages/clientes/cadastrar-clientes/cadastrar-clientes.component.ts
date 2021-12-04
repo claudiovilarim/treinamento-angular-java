@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-cadastrar-clientes',
@@ -7,7 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarClientesComponent implements OnInit {
 
-  constructor() { }
+  // checkoutForm = this.formBuilder.group({
+  //   name: '',
+  //   address: ''
+  // });
+
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
+
+  onSubmit(): void {
+    // console.warn('Enviado!', this.checkoutForm.value);
+    // this.checkoutForm.reset();
+  }
 
   ngOnInit(): void {
   }
