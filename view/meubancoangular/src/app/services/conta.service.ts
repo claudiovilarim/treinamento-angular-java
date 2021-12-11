@@ -19,6 +19,9 @@ export class ContaService {
   sacar(valor: ISaque){
     return this.http.post(`${this.api}/saque`, valor);
   }
+  depositar(valor: ISaque){
+    return this.http.post(`${this.api}/deposito`, valor);
+  }
 }
 
 

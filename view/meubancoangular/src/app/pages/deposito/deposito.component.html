@@ -1,1 +1,24 @@
 <h2>Depósito</h2>
+
+<form class="row" [formGroup]="formGroup" (ngSubmit)="depositar()">
+  <!-- <form (ngSubmit)="onSubmit()"> -->
+    <label for="">Agência</label>
+    <input type="text" class="form-control" formControlName="agencia">
+
+
+    <label for="">Conta</label>
+    <input type="text" class="form-control" formControlName="numeroConta">
+
+    <label for="">Valor</label>
+    <input type="text" class="form-control" formControlName="valor">
+
+
+    <!-- <div class="col">
+      <a class="btn btn-primary">Sacar</a>
+    </div> -->
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-dark">Depositar</button>
+    </div>
+
+  </form>

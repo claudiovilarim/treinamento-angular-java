@@ -30,7 +30,7 @@ export class SaqueComponent implements OnInit {
     saque.valor = Number(saque.valor);
     this.contaService.sacar(saque).subscribe(contaAPI => {
 
-      Swal.fire('Deu certo!', 'Cadastrado com sucesso', 'success');
+      Swal.fire('Deu certo!', 'Sucesso', 'success');
       this.router.navigate(['/contas']);
 
     }, error => {

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/claudiovilarim/treinamento-angular-java/issues"
   },
-  "homepage": "https://github.com/claudiovilarim/treinamento-angular-java#readme"
+  "homepage": "https://github.com/claudiovilarim/treinamento-angular-java#readme",
+  "dependencies": {
+    "sweetalert2": "^11.2.2"
+  }
 }
