@@ -1,0 +1,35 @@
+<h2>Transferência</h2>
+
+<form class="row" [formGroup]="formGroup" (ngSubmit)="transferir()">
+<!-- <form (ngSubmit)="onSubmit()"> -->
+  <label for="">Agência Destino</label>
+  <input type="text" class="form-control" formControlName="agenciaDestino">
+
+  <label for="">Agência Origem</label>
+  <input type="text" class="form-control" formControlName="agenciaOrigem">
+
+
+  <label for="">Conta Destino</label>
+  <input type="text" class="form-control" formControlName="numeroContaDestino">
+  <label for="">Conta Origem</label>
+
+  <input type="text" class="form-control" formControlName="numeroContaOrigem">
+
+  <label for="">Valor</label>
+  <input type="text" class="form-control" formControlName="valor">
+
+
+  <!-- <div class="col">
+    <a class="btn btn-primary">Sacar</a>
+  </div> -->
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-dark">Transferir</button>
+  </div>
+
+</form>
+
+
+<!-- <app-checkbox label=""></app-checkbox> -->
+
+<!-- <app-botao titulo="Enviar"></app-botao> -->
