@@ -25,19 +25,19 @@ export class ClientesComponent implements OnInit {
 
   confirmar(id: number){
     Swal.fire({
-      title: 'Tu tem certeza, mano?',
-      text: "Vai apaagr mermo?!",
+      title: 'Tem certeza?',
+      text: "O cliente será deletado!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Deletar'
     }).then((result) => {
       if (result.isConfirmed) {
         this.clienteService.remover(id).subscribe(result => {
           Swal.fire(
             'Removido!',
-            'Cliente removido ocm sucesso!',
+            'Cliente removido com sucesso!',
             'success'
           );
           this.listarTodosClientes();
