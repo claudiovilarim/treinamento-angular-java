@@ -1,31 +1,49 @@
-<h2>Transferência</h2>
+<h2 class="text-center">Transferência</h2>
 
-<form class="row" [formGroup]="formGroup" (ngSubmit)="transferir()">
+<form class="row m-4 p-5 bg-light card" [formGroup]="formGroup" (ngSubmit)="transferir()">
 <!-- <form (ngSubmit)="onSubmit()"> -->
-  <label for="">Agência Destino</label>
-  <input type="text" class="form-control" formControlName="agenciaDestino">
 
-  <label for="">Agência Origem</label>
-  <input type="text" class="form-control" formControlName="agenciaOrigem">
+  <div class="row">
+    <div class="col-md-4">
+      <label for="">Agência Origem</label>
+      <input type="text" class="form-control" formControlName="agenciaOrigem">
 
+      <label for="">Conta Origem</label>
+      <input type="text" class="form-control" formControlName="numeroContaOrigem">
+    </div>
 
-  <label for="">Conta Destino</label>
-  <input type="text" class="form-control" formControlName="numeroContaDestino">
-  <label for="">Conta Origem</label>
+    <div class="col-md-4 text-center">
+      <img width="140px" src="https://image.freepik.com/free-vector/illustration-financial_53876-5903.jpg" alt="" srcset="">
+    </div>
 
-  <input type="text" class="form-control" formControlName="numeroContaOrigem">
+    <div class="col-md-4">
+      <label for="">Agência Destino</label>
+      <input type="text" class="form-control" formControlName="agenciaDestino">
 
-  <label for="">Valor</label>
-  <input type="text" class="form-control" formControlName="valor">
+      <label for="">Conta Destino</label>
+      <input type="text" class="form-control" formControlName="numeroContaDestino">
+    </div>
+  </div>
 
+  <div class="row mt-3">
+    <div class="col-md-3">
+      <label for="">Valor</label>
+      <input type="text" class="form-control" formControlName="valor">
+      <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mt-2">Transferir</button>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+
+  <!-- <div class="col-md-12 mt-5">
+    <button type="submit" class="btn btn-dark">Transferir</button>
+  </div> -->
 
   <!-- <div class="col">
     <a class="btn btn-primary">Sacar</a>
   </div> -->
 
-  <div class="col-12">
-    <button type="submit" class="btn btn-dark">Transferir</button>
-  </div>
 
 </form>
 

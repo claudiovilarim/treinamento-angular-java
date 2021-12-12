@@ -1,7 +1,8 @@
-<h2>Saque</h2>
+<h2 class="text-center">Saque</h2>
 
-<form class="row" [formGroup]="formGroup" (ngSubmit)="sacar()">
+<form class="row m-4 p-5 bg-light card" [formGroup]="formGroup" (ngSubmit)="sacar()">
 <!-- <form (ngSubmit)="onSubmit()"> -->
+
   <label for="">Agência</label>
   <input type="text" class="form-control" formControlName="agencia">
 
@@ -17,8 +18,8 @@
     <a class="btn btn-primary">Sacar</a>
   </div> -->
 
-  <div class="col-12">
-    <button type="submit" class="btn btn-dark">Sacar</button>
+  <div class="col-md-12">
+    <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mt-5">Sacar</button>
   </div>
 
 </form>

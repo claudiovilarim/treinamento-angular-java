@@ -1,12 +1,12 @@
-<h1>Cadastro de clientes</h1>
-<hr>
+<h2 class="text-center">Cadastro de clientes</h2>
 
-<small>
+
+<!-- <small>
   {{ formGroup.value | json }}
   {{ formGroup.valid | json }}
-</small>
+</small> -->
 
-<form [formGroup]="formGroup" (ngSubmit)="enviar()">
+<form [formGroup]="formGroup" (ngSubmit)="enviar()" class="bg-light card p-4">
   <div class="mb-3">
     <label for="">Nome</label>
     <input type="text" class="form-control" formControlName="nome">

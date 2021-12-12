@@ -1,24 +1,24 @@
-<h2>Depósito</h2>
+<h2 class="text-center">Depósito</h2>
 
-<form class="row" [formGroup]="formGroup" (ngSubmit)="depositar()">
+<form class="row m-4 p-5 bg-light card" [formGroup]="formGroup" (ngSubmit)="depositar()">
   <!-- <form (ngSubmit)="onSubmit()"> -->
-    <label for="">Agência</label>
-    <input type="text" class="form-control" formControlName="agencia">
+  <label for="">Agência</label>
+  <input type="text" class="form-control" formControlName="agencia">
 
 
-    <label for="">Conta</label>
-    <input type="text" class="form-control" formControlName="numeroConta">
+  <label for="">Conta</label>
+  <input type="text" class="form-control" formControlName="numeroConta">
 
-    <label for="">Valor</label>
-    <input type="text" class="form-control" formControlName="valor">
+  <label for="">Valor</label>
+  <input type="text" class="form-control" formControlName="valor">
 
 
-    <!-- <div class="col">
-      <a class="btn btn-primary">Sacar</a>
-    </div> -->
+  <!-- <div class="col">
+    <a class="btn btn-primary">Sacar</a>
+  </div> -->
 
-    <div class="col-12">
-      <button type="submit" class="btn btn-dark">Depositar</button>
-    </div>
+  <div class="col-md-12">
+    <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mt-5">Depositar</button>
+  </div>
 
-  </form>
+</form>
